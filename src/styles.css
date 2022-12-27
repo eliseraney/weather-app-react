@@ -1,0 +1,18 @@
+body {
+  background-color: #033b55;
+  font-family: "Varela Round", sans-serif;
+  color: #fff;
+}
+
+.App h1 {
+  font-size: 30px;
+  text-align: center;
+  font-weight: bolder;
+  color: #f79500;
+}
+
+.App hr {
+  max-width: 150px;
+  display: block;
+  margin: 20px auto;
+}

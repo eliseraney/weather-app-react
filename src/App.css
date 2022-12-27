@@ -1,16 +1,28 @@
 .App {
+  font-family: sans-serif;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Search form {
+  display: block;
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Search input {
+  padding: 5px;
+  margin: 2px;
+}
+
+.Search h3 {
+  text-align: center;
+}
+
+.Search li {
+  list-style: none;
+}
+
+.Search ul {
+  padding: 0;
 }
 
 .App-header {
@@ -22,6 +34,14 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.Footer a {
+  font-size: 12px;
+}
+
+.Footer p {
+  text-align: center;
 }
 
 .App-link {

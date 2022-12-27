@@ -1,0 +1,13 @@
+.Temperature h2 {
+  text-align: center;
+}
+
+.Temperature .high {
+  font-weight: bold;
+  color: #ebb652;
+}
+
+.Temperature .degree {
+  font-size: 15px;
+  vertical-align: top;
+}

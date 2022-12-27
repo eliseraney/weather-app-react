@@ -1,0 +1,10 @@
+.WindSpeed span {
+  display: block;
+  text-align: center;
+}
+
+.WindSpeed .specific {
+  text-align: center;
+  font-size: 12px;
+  opacity: 85%;
+}
