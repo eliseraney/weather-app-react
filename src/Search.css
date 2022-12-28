@@ -1,4 +1,8 @@
-.Search #search-form {
+.Search {
   display: block;
   padding-top: 10px;
+}
+
+.Search input {
+  margin: 3px;
 }
