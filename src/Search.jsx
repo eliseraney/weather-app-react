@@ -14,7 +14,7 @@ export default function Search(props) {
     setWeatherData({
       ready: true,
       date: moment.unix(response.data.time).format("dddd h:mm A"),
-      icon: `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-night.png`,
+      iconURL: `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`,
       city: response.data.city,
       conditions: response.data.condition.description,
       feelsLike: Math.round(response.data.temperature.feels_like),

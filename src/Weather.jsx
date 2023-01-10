@@ -6,7 +6,7 @@ export default function Weather(props) {
   return (
     <div className="Weather">
       <div className="date">Last updated: {props.data.date}</div>
-      <img src={props.data.icon} alt={props.data.conditions} />
+      <img src={props.data.iconURL} alt={props.data.conditions} />
       <div className="conditions">
         <p>{props.data.conditions}</p>
       </div>
