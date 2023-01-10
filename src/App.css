@@ -1,4 +1,9 @@
 .App {
   font-family: sans-serif;
-  text-align: center;
+}
+
+.App hr {
+  display: block;
+  margin: 20px auto;
+  max-width: 150px;
 }

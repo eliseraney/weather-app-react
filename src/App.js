@@ -1,10 +1,8 @@
+import "./App.css";
 import "./styles.css";
 
 import Search from "./Search";
-import Condition from "./Condition";
-import Temperature from "./Temperature";
-import WindSpeed from "./WindSpeed";
-import Humidity from "./Humidity";
+import Weather from "./Weather";
 import Footer from "./Footer";
 
 export default function App() {
@@ -12,11 +10,7 @@ export default function App() {
     <div className="App">
       <div className="container">
         <Search />
-        <Condition />
-        <h1>Denver</h1>
-        <Temperature />
-        <WindSpeed />
-        <Humidity />
+        <Weather />
         <hr />
         <Footer />
       </div>

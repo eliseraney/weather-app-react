@@ -1,0 +1,40 @@
+.Weather .conditions {
+  font-size: 15px;
+  color: #96b1c1;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.Weather h1 {
+  font-size: 50px;
+  text-transform: capitalize;
+  text-align: center;
+  letter-spacing: 2px;
+  font-weight: bolder;
+  color: #fefdb0;
+}
+
+.Weather h2 {
+  text-align: center;
+}
+
+.Weather .high {
+  font-size: 40px;
+  font-weight: bold;
+  color: #efe092;
+}
+
+.Weather .degree {
+  font-size: 15px;
+  vertical-align: top;
+  font-size: 20px;
+}
+
+.Weather .humidity,
+.Weather .wind-speed {
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  opacity: 85%;
+}
