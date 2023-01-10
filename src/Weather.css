@@ -41,6 +41,11 @@
   line-height: 1.6;
 }
 
+.Weather a {
+  text-decoration: none;
+  color: #96b1c1;
+}
+
 .Weather .weather-grid {
   display: grid;
   margin: 0 auto;

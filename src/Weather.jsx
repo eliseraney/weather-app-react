@@ -1,6 +1,7 @@
 import React from "react";
 
 import WeatherIcon from "./WeatherIcon.jsx";
+import Temperature from "./Temperature.jsx";
 
 import "./Weather.css";
 
@@ -13,10 +14,7 @@ export default function Weather(props) {
         <p>{props.data.conditions}</p>
       </div>
       <h1>{props.data.city}</h1>
-      <h2>
-        <span className="high">{props.data.temperature}</span>
-        <span className="degree">°</span>
-      </h2>
+      <Temperature fahrenheit={props.data.temperature} />
       <div className="feels-like">
         <strong>Feels Like </strong>
         {props.data.feelsLike}°
