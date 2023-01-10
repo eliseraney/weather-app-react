@@ -1,7 +1,6 @@
-.Weather img {
+.Weather canvas {
   display: block;
   margin: 0 auto;
-  width: 150px;
   aspect-ratio: 1/1;
 }
 

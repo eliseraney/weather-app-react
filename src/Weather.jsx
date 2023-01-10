@@ -1,12 +1,14 @@
 import React from "react";
 
+import WeatherIcon from "./WeatherIcon.jsx";
+
 import "./Weather.css";
 
 export default function Weather(props) {
   return (
     <div className="Weather">
       <div className="date">Last updated: {props.data.date}</div>
-      <img src={props.data.iconURL} alt={props.data.conditions} />
+      <WeatherIcon code={props.data.icon} />
       <div className="conditions">
         <p>{props.data.conditions}</p>
       </div>
