@@ -8,10 +8,9 @@ export default function App() {
   return (
     <div className="App">
       <div className="container">
-        <Search defaultCity="Tokyo" />
-        <hr />
-        <Footer />
+        <Search defaultCity="Denver" />
       </div>
+      <Footer />
     </div>
   );
 }

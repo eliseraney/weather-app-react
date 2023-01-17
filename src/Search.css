@@ -34,3 +34,9 @@
 .Search #search-input::placeholder {
   color: #466390;
 }
+
+@media (max-width: 768px) {
+  .Search form {
+    max-width: fit-content;
+  }
+}

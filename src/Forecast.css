@@ -1,0 +1,47 @@
+.Forecast {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  text-align: center;
+  width: 700px;
+}
+
+.Forecast {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex: 1;
+}
+
+.Forecast .day,
+.Forecast .high {
+  font-weight: bold;
+}
+
+.Forecast .day {
+  margin-bottom: 15px;
+}
+
+.Forecast .temperature {
+  margin-top: 15px;
+}
+
+.Forecast .high {
+  margin-right: 5px;
+}
+
+.Forecast .low {
+  opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+  .Forecast {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: fit-content;
+  }
+
+  .Forecast .temperature {
+    margin-bottom: 50px;
+  }
+} ;

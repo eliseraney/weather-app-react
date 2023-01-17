@@ -1,0 +1,42 @@
+.Temperature .high {
+  font-size: 40px;
+  font-weight: bold;
+  color: #efe092;
+}
+
+.Temperature .degree {
+  font-size: 15px;
+  vertical-align: top;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.Temperature .weather-grid {
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: 1fr 1fr;
+  max-width: 300px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.Temperature .humidity,
+.Temperature .wind-speed,
+.Temperature .feels-like {
+  display: block;
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 12px;
+  opacity: 85%;
+}
+
+.Temperature .wind-speed {
+  text-transform: none;
+}
+
+.Temperature .feels-like,
+.Temperature .date {
+  font-size: 14px;
+  opacity: 0.7;
+  margin-top: 0;
+}

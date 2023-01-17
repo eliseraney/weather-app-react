@@ -3,6 +3,7 @@ import axios from "axios";
 import moment from "moment/moment";
 
 import Weather from "./Weather";
+import Forecast from "./Forecast";
 
 import "./Search.css";
 
@@ -16,6 +17,7 @@ export default function Search(props) {
       date: moment.unix(response.data.time).format("dddd h:mm A"),
       icon: response.data.condition.icon,
       city: response.data.city,
+      coordinates: response.data.coordinates,
       conditions: response.data.condition.description,
       feelsLike: Math.round(response.data.temperature.feels_like),
       temperature: Math.round(response.data.temperature.current),
@@ -31,6 +33,15 @@ export default function Search(props) {
     axios.get(apiUrl).then(handleResponse);
   }
 
+  function findCurrentCity(position) {
+    const apiKey = "f447fe69101c60eaf9ebct1443fc07bo";
+    let units = "imperial";
+    let lat = position.coords.latitude;
+    let lon = position.coords.longitude;
+    const apiUrl = `https://api.shecodes.io/weather/v1/current?lon=${lon}&lat=${lat}&key=${apiKey}&units=${units}`;
+    axios.get(apiUrl).then(handleResponse);
+  }
+
   function handleSubmit(event) {
     event.preventDefault();
     search();
@@ -40,9 +51,14 @@ export default function Search(props) {
     setCity(event.target.value);
   }
 
+  function handleCurrentCity(event) {
+    event.preventDefault();
+    navigator.geolocation.getCurrentPosition(findCurrentCity);
+  }
+
   if (weatherData.ready) {
     return (
-      <div className="serach">
+      <div className="Search">
         <form className="Search" id="search-form" onSubmit={handleSubmit}>
           <input
             type="search"
@@ -55,9 +71,22 @@ export default function Search(props) {
             onChange={handleCityChange}
           />
           <input id="submit-button" type="submit" value="Search" />
-          <input id="current-city-button" type="submit" value="Current City" />
+          <input
+            id="current-city-button"
+            type="submit"
+            value="Current City"
+            onClick={handleCurrentCity}
+          />
         </form>
         <Weather data={weatherData} />
+        <hr />
+        <div className="ForecastGrid">
+          <div className="row">
+            <div className="col">
+              <Forecast coordinates={weatherData.coordinates} />
+            </div>
+          </div>
+        </div>
       </div>
     );
   } else {
